@@ -1,0 +1,244 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.pageTitle {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: flex-start;
+  margin-top: 72px;
+  margin-bottom: 24px;
+}
+
+#faker {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0.4px;
+  margin-bottom: 7px;
+}
+
+#subtitle{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.32px;
+  margin-top: 7px;
+}
+
+.jumbotron{
+  width: 85%;
+  height: fit-content;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  margin-top: 24px;
+  padding: 32px 0;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+.bar{
+  box-sizing: border-box;
+  background: #E1EDFF;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #000000;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  width: 85%;
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 0.5fr;
+  grid-template-areas: "fieldHead typeHead delHead";
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  padding: 10px 16px 10px 16px;
+}
+
+#inputForm {
+  width: 85%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.field{
+  box-sizing: border-box;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 0.5fr;
+  grid-template-areas: "newField newType newDel";
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  padding: 10px 16px 10px 16px;
+  margin: 16px 0 0 0;
+  padding: 10px 16px;
+}
+
+input, select {
+  width: 85%;
+  background: #FFFFFF;
+  color: #000000;
+  border-color: transparent;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.11);
+  border-radius: 8px;
+  padding: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.delete {
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  line-height: 20px;
+  background: #ffff;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.11);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete svg {
+  width: 48px;
+  fill: red;
+}
+
+.add{
+  background: #0066FF;
+  color: white;
+  border-radius: 8px;
+  border-color: transparent;
+  margin-top: 16px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.add svg {
+  fill: #ffff;
+}
+
+.submission{
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.submission input {
+  width: fit-content;
+  margin: 8px 0;
+}
+
+.data {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.data label {
+  font-size: 16px;
+}
+
+.dataFormat {
+  width: fit-content;
+}
+
+.rows {
+  width: fit-content;
+}
+
+#submit {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #FFFFFF;
+  background: #0066FF;
+  padding: 16px 84px;
+}
+
+#submit:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width:520px) {
+  .field input {
+    margin-bottom: 8px;
+  }
+
+  .bar{
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "fieldHead delHead" "typeHead delHead";
+  }
+
+  .field{
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "newField newDel" "newType newDel";
+  }
+}
