@@ -26,7 +26,7 @@ export let fieldTypes = [
   "Word",
 ];
 
-export let dataFormats = ["JSON", "CSV", "JavaScript"];
+export let dataFormats = ["JSON", "CSV", "JavaScript", "TSV"];
 
 export function valueReturn(key) {
   switch (key) {
@@ -37,10 +37,10 @@ export function valueReturn(key) {
       return faker.name.lastName();
 
     case "Full Name":
-      return faker.name.firstName();
+      return faker.name.fullName();
 
     case "Number":
-      return faker.random.numeric();
+      return faker.random.numeric(2);
 
     case "Sex":
       return faker.name.sex();

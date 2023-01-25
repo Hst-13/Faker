@@ -1,5 +1,5 @@
 import { valueReturn } from "./store";
-import { js2csv } from "./dataConverter";
+import { js2csv, js2tsv } from "./dataConverter";
 import download from "downloadjs";
 
 export function generateData(schema, dataFormat, noOfRows) {
@@ -36,6 +36,10 @@ function initiateDownload(testData, dataFormat) {
 
     case "JavaScript":
       download(testData, "testData.js", "text/plain");
+      break;
+
+    case "TSV":
+      download(js2tsv(testData), "testData.tsv", "text/plain");
       break;
   }
 }
